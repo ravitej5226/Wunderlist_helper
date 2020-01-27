@@ -47,6 +47,8 @@ class index extends Component {
             onClick={() => this.props.onSetupNextWeek(this.props.listId)}
           />
         </label>
+        <label className="itemCount">{this.props.completedItemCount+"/"+this.props.totalItemCount} completed
+        </label>
       </div>
     );
   }
@@ -67,6 +69,9 @@ const StyledActionBar = styled(index)`
     }
     .setup-next-week {
       margin-left: 30px;
+    }
+    .itemCount{
+      margin-left:10px;
     }
   }
 `;
